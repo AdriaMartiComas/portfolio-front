@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/tipos/JetBrainsMono-2.304/fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+}
+
+html {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: rgba(206, 175, 96, 0.261);
+}
+
+body {
+  margin: 0 auto;
+  min-width: 720px;
+  max-width: 1200px;
+  padding-top: 30px
+}
+
+
+
+

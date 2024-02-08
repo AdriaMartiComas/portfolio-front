@@ -1,0 +1,43 @@
+.banner-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.image-container img {
+  float: right;
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.title-container {
+  width: 700px;
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 100px;
+  text-align: center;
+}
+
+h1 {
+  opacity: 0;
+  animation: fade-in-up 1.5s ease-out forwards;
+}
+
+h2 {
+  font-weight: lighter;
+  opacity: 0;
+  animation: fade-in-up 1.5s ease-out 1s forwards;
+}
+
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

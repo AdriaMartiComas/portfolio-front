@@ -1,0 +1,22 @@
+
+
+.Work-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px; /* Ajusta este valor para cambiar el espacio entre el título y las tarjetas */
+}
+
+.work-title {
+  justify-self: start; /* Alinea el título a la izquierda */
+  width: 90px;
+  margin: 0 60px 0 0;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px; /* Ajusta este valor para cambiar el espacio entre las tarjetas */
+
+}
+
+
