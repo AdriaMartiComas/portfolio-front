@@ -8,11 +8,11 @@ import { Tag } from '../_models/Tag';
 export class ProjectsService {
 
   projects: Project[] = [
-    {id: 0, title: "Ita Challenges", pictures: ["../../assets/logo-it-academy.png","../../assets/ita-challenges-1.png","../../assets/ita-challenges-2.png", "../../assets/ita-challenges-3.png"],
+    {id: 0, title: "Ita Challenges", pictures: ["../../assets/ita/ita-challenges-1.png","../../assets/ita/ita-challenges-2.png", "../../assets/ita/ita-challenges-3.png"],
       projectLink: "https://github.com/IT-Academy-BCN/ita-challenges-backend", subtitle: "Web project for carrying out programming challenges.",
       description: "Collaborator in the project based on microservices in different Docker containers. A project with a large work team, using the SCRUM methodology for correct development.",
       tags: [Tag.JAVA, Tag.SPRING, Tag.DOCKER, Tag.GIT, Tag.JUNIT]},
-    {id: 1, title: "Dice Game GUI", pictures: ["../../assets/Image1.png","../../assets/Image2.png","../../assets/Image3.png"],
+    {id: 1, title: "Dice Game GUI", pictures: ["../../assets/Joc-daus-thymeleaf/Daus-1.png","../../assets/Joc-daus-thymeleaf/Daus-2.png","../../assets/Joc-daus-thymeleaf/Daus-3.png", "../../assets/Joc-daus-thymeleaf/Daus-4.png", "../../assets/Joc-daus-thymeleaf/Daus-5.png", "../../assets/Joc-daus-thymeleaf/Daus-6.png", "../../assets/Joc-daus-thymeleaf/Daus-7.png", "../../assets/Joc-daus-thymeleaf/Daus-8.png"],
       projectLink: "https://github.com/AdriaMartiComas/Joc-Daus-GUI/tree/master", subtitle: "Gambling game web app where users can compete between them. With grafic interface",
       description: "Project built to learn several technologies like Java, Spring Boot, MySQL, and Thymeleaf. The game itself is really simple, designed to feed data to the database and then perform different actions with this data, such as creating and deleting users, playing the game as a user, viewing games played by users, and seeing the best and worst ratios between users.", tags: [Tag.JAVA, Tag.SPRING, Tag.SQL, Tag.THYMELEAF]},
     {id: 2, title: "Dice Game Security", pictures: ["../../assets/Image1.png","../../assets/Image2.png","../../assets/Image3.png"],

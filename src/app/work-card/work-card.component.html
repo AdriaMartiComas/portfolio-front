@@ -1,22 +1,17 @@
 <div class="card">
-  <!-- <div class="card-content"> -->
-    <!-- <div class="image-content">
-      <img src={{project.pictures[0]}} alt="Dice game" />
-    </div> -->
-    <div class="text-content">
-      <h1>{{ project.title }}</h1>
-      <p>{{ project.subtitle }}</p>
-      <div class="btn">
-        <button (click)="openDialog()">View more</button>
-        <a [href]="project.projectLink" target="_blank">
-          <button>View code</button>
-        </a>
-      </div>
+  <div class="text-content">
+    <h1>{{ project.title }}</h1>
+    <p>{{ project.subtitle }}</p>
+    <div class="btn">
+      <button (click)="openDialog(project.id)">View more</button>
+      <a [href]="project.projectLink" target="_blank">
+        <button>View code</button>
+      </a>
     </div>
-    <div class="tags">
-      @for (tag of project.tags; track tag) {
-      <span class="tag" [style.backgroundColor]="tag.color">{{ tag }}</span>
-      }
-    </div>
-  <!-- </div> -->
+  </div>
+  <div class="tags">
+    @for (tag of project.tags; track tag) {
+    <span class="tag" [style.backgroundColor]="tag.color">{{ tag }}</span>
+    }
+  </div>
 </div>

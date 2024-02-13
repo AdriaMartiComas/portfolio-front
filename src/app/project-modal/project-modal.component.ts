@@ -1,5 +1,7 @@
-import { Component, ElementRef, EventEmitter, Output } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { Component, ElementRef, EventEmitter, Output, Input, Inject, Renderer2 } from '@angular/core';
+import { Project } from '../_models/Project';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { DOCUMENT } from '@angular/common';
 
 
 @Component({
@@ -10,26 +12,40 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrl: './project-modal.component.css'
 })
 export class ProjectModalComponent {
-  // constructor(public dialog: MatDialog) {}
+  currentSlide = 0;
 
 
-  // openDialog() {
-  //   this.dialog.open(ProjectModalComponent);
+  constructor(
+    public dialogRef: MatDialogRef<ProjectModalComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: { project: Project },
+    private renderer: Renderer2,
+    @Inject(DOCUMENT) private document: Document
+  ) { }
+
+  // ngOnInit() {
+  //   this.renderer.setStyle(this.document.body, 'overflow', 'hidden');
+  //   this.renderer.setStyle(this.document.body, 'position', 'fixed');
+
+
   // }
-  @Output() closeEvent = new EventEmitter();
 
-  constructor(private el: ElementRef) { }
+  // ngOnDestroy() {
+  //   this.renderer.setStyle(this.document.body, 'overflow', 'auto');
+  //   this.renderer.setStyle(this.document.body, 'position', 'static');
 
-  ngOnInit() {
-    this.el.nativeElement.addEventListener('click', (e: { target: any; }) => {
-      if (e.target === this.el.nativeElement) {
-        this.close();
-      }
-    });
+
+  // }
+
+  nextSlide() {
+    this.currentSlide = (this.currentSlide + 1) % this.data.project.pictures.length;
   }
 
-  close() {
-    this.closeEvent.emit();
+  prevSlide() {
+    this.currentSlide = (this.currentSlide - 1 + this.data.project.pictures.length) % this.data.project.pictures.length;
+  }
+
+  onClose(): void {
+    this.dialogRef.close();
   }
 
 }
