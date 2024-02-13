@@ -3,7 +3,7 @@
     <h1>{{ project.title }}</h1>
     <p>{{ project.subtitle }}</p>
     <div class="btn">
-      <button (click)="openDialog(project.id)">View more</button>
+      <button mat-button (click)="openDialog(project.id)">View more</button>
       <a [href]="project.projectLink" target="_blank">
         <button>View code</button>
       </a>
