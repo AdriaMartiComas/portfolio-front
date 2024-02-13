@@ -6,6 +6,7 @@ import { Banner2Component } from './banner2/banner2.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { WorkComponent } from './work/work.component';
+import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ import { WorkComponent } from './work/work.component';
   imports: [RouterOutlet,
     HeaderComponent, BannerComponent,
     Banner2Component, AboutComponent,
-    WorkComponent,
+    WorkComponent, ContactComponent,
     FooterComponent
   ],
   templateUrl: './app.component.html',

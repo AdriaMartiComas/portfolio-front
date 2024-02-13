@@ -1,15 +1,21 @@
 <div class="project-modal">
-<mat-dialog-content>
-  <h1>{{ data.project.title }}</h1>
-    <p>{{ data.project.description }}</p>
-    <img [src]="data.project.pictures[currentSlide]" alt="project pic" />
-    <div class="slide-selector">
-      <button (click)="prevSlide()">Previous image</button>
-      <button (click)="nextSlide()">Next image</button>
-
-    </div></mat-dialog-content>
-<mat-dialog-actions>
-  <button>View code</button>
-  <button mat-button mat-dialog-close>Close</button>
-</mat-dialog-actions>
+  <mat-dialog-content>
+    <h1>{{ data.project.title }}</h1>
+    <div class="content">
+      <div class="description">
+        <p>{{ data.project.description }}</p>
+      </div>
+      <div class="image">
+        <img [src]="data.project.pictures[currentSlide]" alt="project pic" />
+        <div class="slide-selector">
+          <button (click)="prevSlide()"> <-- </button>
+          <button (click)="nextSlide()"> --> </button>
+        </div>
+      </div>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button>View code</button>
+    <button mat-button mat-dialog-close>Close</button>
+  </mat-dialog-actions>
 </div>
