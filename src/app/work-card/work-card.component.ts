@@ -23,6 +23,6 @@ export class WorkCardComponent {
     const dialogRef = this.dialog.open(ProjectModalComponent, {
       data: { project: project }
     });
-    }
+  }
 
 }

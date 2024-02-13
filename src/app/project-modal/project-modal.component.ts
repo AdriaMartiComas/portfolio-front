@@ -22,19 +22,17 @@ export class ProjectModalComponent {
     @Inject(DOCUMENT) private document: Document
   ) { }
 
-  // ngOnInit() {
-  //   this.renderer.setStyle(this.document.body, 'overflow', 'hidden');
-  //   this.renderer.setStyle(this.document.body, 'position', 'fixed');
+  ngOnInit() {
+    this.renderer.addClass(this.document.body, 'modal-open');
+    this.renderer.setStyle(this.document.body, 'overflow', 'hidden');
+    console.log('Modal opened:', this.document.body.classList.contains('modal-open'));  // Should print: Modal opened: true
+  }
 
-
-  // }
-
-  // ngOnDestroy() {
-  //   this.renderer.setStyle(this.document.body, 'overflow', 'auto');
-  //   this.renderer.setStyle(this.document.body, 'position', 'static');
-
-
-  // }
+  ngOnDestroy() {
+    this.renderer.removeClass(this.document.body, 'modal-open');
+    this.renderer.setStyle(this.document.body, 'overflow', 'auto');
+    console.log('Modal closed:', !this.document.body.classList.contains('modal-open'));  // Should print: Modal closed: true
+  }
 
   nextSlide() {
     this.currentSlide = (this.currentSlide + 1) % this.data.project.pictures.length;
