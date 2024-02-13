@@ -1,5 +1,10 @@
 .divider {
+  padding-top: 12px;
+  padding-bottom: 80px;
+}
+.line {
   margin-top: 80px;
   height: 1px;
-  background-color: black;
+  background-color: black;  /* Agrega una línea negra */
 }
+

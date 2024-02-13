@@ -7,8 +7,10 @@
       <h1>{{ project.title }}</h1>
       <p>{{ project.subtitle }}</p>
       <div class="btn">
-        <button>View more</button>
-        <button>View code</button>
+        <button (click)="openDialog()">View more</button>
+        <a [href]="project.projectLink" target="_blank">
+          <button>View code</button>
+        </a>
       </div>
     </div>
     <div class="tags">
