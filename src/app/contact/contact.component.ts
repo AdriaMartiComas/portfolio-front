@@ -9,26 +9,40 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
-  // REVISAR ESTE MÉTODO VIENE DE CHAT GPT-3
+  userEmail = '';
+  subject = '';
+  message = '';
 
-  sendEmail() {
-    // Obtener los valores del formulario
-    var userEmail = (document.getElementById("email") as HTMLInputElement)?.value;
-    var subject = (document.getElementById("subject") as HTMLInputElement)?.value;
-    var message = (document.getElementById("message") as HTMLInputElement)?.value;
+  async sendEmail() {
+    //TO DO arreglar funcio, no va bé
 
     // Validar que se hayan proporcionado todos los campos
-    if (userEmail === "" || subject === "" || message === "") {
-      alert("Por favor, completa todos los campos.");
+    if (this.userEmail === "" || this.subject === "" || this.message === "") {
+      alert("Please complete all fields.");
       return;
     }
 
-    // Crear el enlace de correo electrónico
-    var mailtoLink = "mailto:adriamarticomas@gmail.com" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent("De: " + userEmail + "\n\n" + message);
+    // Crear el objeto de datos del correo electrónico
+    const emailData = {
+      email: this.userEmail,
+      subject: this.subject,
+      message: this.message
+    };
 
-    // Abrir el cliente de correo predeterminado del usuario
-    window.location.href = mailtoLink;
+    // Enviar una solicitud POST a tu servidor
+    const response = await fetch('http://localhost:8080/apiAdri/enviar', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(emailData)
+    });
+
+    if (response.ok) {
+      alert("Email sent to Adrià Martí Comas");
+    } else {
+      alert("Error sending email");
+    }
   }
+
 }
