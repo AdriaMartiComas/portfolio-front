@@ -8,3 +8,15 @@
   background-color: black;  /* Agrega una línea negra */
 }
 
+.header-wrapper {
+    box-sizing: border-box;
+    position: fixed;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    max-width: 1260px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+

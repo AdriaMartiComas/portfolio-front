@@ -1,15 +1,38 @@
-<header class="nav-bar">
-  <div class="header-container">
-    <a href="#top">
-      <div class="name">
-        <h1>Adrià Martí Comas  -</h1>
-        <h2>Back End Developer</h2>
-      </div>
-    </a>
-    <div class="nav-buttons">
-      <a href="#about"><button>About Me</button></a>
-      <a href="#work"><button>Work</button></a>
-      <a href="#contact"><button>Contact</button></a>
+<div [ngClass]="{'small-screen': screenSizeService.screenSize === 'small', 'medium-screen': screenSizeService.screenSize === 'medium', 'large-screen': screenSizeService.screenSize === 'large'}">
+
+  <header class="nav-bar">
+    <div class="header-container">
+      <a href="#top">
+        <div class="name">
+          <h1>Adrià Martí Comas -</h1>
+          <h2>Back End Developer</h2>
+        </div>
+      </a>
+      @if (screenSizeService.screenSize === 'medium' || screenSizeService.screenSize === 'large'){
+        <div class="nav-buttons">
+          <a href="#about"><button>About Me</button></a>
+          <a href="#work"><button>Work</button></a>
+          <a href="#contact"><button>Contact</button></a>
+        </div>
+      }
+      @if (screenSizeService.screenSize === 'small'){
+        <div class="menu-container">
+          <button class="hamburger-menu" (click)="isMenuOpen = !isMenuOpen">
+            <div></div>
+            <div></div>
+            <div></div>
+          </button>
+          @if (isMenuOpen){
+            <div class="dropdown-menu" [class.show]="isMenuOpen">
+              <a href="#about" (click)="closeMenu()">About Me</a>
+              <a href="#work" (click)="closeMenu()">Work</a>
+              <a href="#contact" (click)="closeMenu()">Contact</a>
+            </div>
+          }
+        </div>
+      }
+
+
     </div>
-  </div>
-</header>
+  </header>
+</div>

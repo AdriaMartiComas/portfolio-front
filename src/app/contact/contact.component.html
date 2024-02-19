@@ -3,42 +3,40 @@
     <h1>Contact</h1>
   </div>
   <div class="contact">
-
     <div class="contact-form" id="contact-form">
-
       <form id="emailForm">
         <p>Send email to: adriamarticomas&#64;gmail.com</p>
         <div class="form-body">
           <input
-          type="email"
-          id="email"
-          name="userEmail"
-          placeholder="Your email"
-          required
-        />
+            type="email"
+            id="email"
+            name="userEmail"
+            placeholder="Your email"
+            required
+            [(ngModel)]="emailData.userEmail"
+          />
 
-        <input
-          type="text"
-          id="subject"
-          name="subject"
-          placeholder="Subject"
-          required
-        />
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Subject"
+            required
+            [(ngModel)]="emailData.subject"
+          />
 
-        <textarea
-          id="message"
-          name="message"
-          rows="10"
-          placeholder="Write your message"
-          required
-        ></textarea>
+          <textarea
+            id="message"
+            name="message"
+            rows="10"
+            placeholder="Write your message"
+            required
+            [(ngModel)]="emailData.message"
+          ></textarea>
         </div>
         <div class="button-container">
-          <button class="my-button" (click)="sendEmail()">
-            Send
-          </button>
+          <button class="my-button" (click)="sendEmail()">Send</button>
         </div>
-
       </form>
     </div>
   </div>

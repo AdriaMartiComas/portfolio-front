@@ -1,25 +1,32 @@
+.small-screen .app-header,
+.medium-screen .app-header,
+.large-screen .app-header {
+  width: 100%;
+}
+
+ .small-screen {
+  min-width: 650px;
+}
 
 header {
-  position: fixed;
   top: 0;
   padding-top: 30px;
   padding-bottom: 30px;
-  width: 1200px;
   z-index: 100;
   background: linear-gradient( to bottom, rgb(242 233 213) 0%, rgb(242 233 213) 85px, rgba(255, 255, 255, 0) 70%);
   transition: opacity 0.5s ease;
   opacity: 1;
 }
+
 body.modal-open header {
   opacity: 0;
 }
+
 .header-container {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-
-
   font-family: 'JetBrains Mono', monospace;
   display: flex;
   justify-content: space-between;
@@ -28,7 +35,6 @@ body.modal-open header {
   border-radius: 100px;
   background-color: none;
   margin-bottom: 80px;
-
 }
 
 h1 {
@@ -37,6 +43,7 @@ h1 {
   font-weight: 700;
   color: #000;
 }
+
 h2 {
   font-family: 'JetBrains Mono', monospace;
   font-size: large;
@@ -61,7 +68,6 @@ h3 {
 .name h1 {
   font-size: large;
   font-weight: 700;
-
   margin-right: 10px;
 }
 
@@ -69,7 +75,6 @@ h3 {
   font-size: large;
   font-weight: 300;
 }
-
 
 .name, .nav-buttons {
   display: flex;
@@ -108,10 +113,67 @@ a {
   padding-right: 10px;
   border-radius: 50px;
   transition: background-color 0.5s ease;
-
 }
 
 .name:hover {
   border-radius: 50px;  background-color: rgba(255, 255, 0, 0.617);
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background: currentColor;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+}
+
+.dropdown-menu {
+  transform: translateX(-80%);
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: rgb(242 233 213);
+  min-width: 160px;
+  border: #000 1px solid;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.5s ease;
+  border-radius: 50px;
+}
+
+.dropdown-menu a:hover {
+  border-radius: 50px;
+  background-color:  rgba(255, 255, 0, 0.617);
+}
+
+.hamburger-menu[aria-expanded="true"] ~ .dropdown-menu {
+  display: flex;
 }
 

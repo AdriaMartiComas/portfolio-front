@@ -1,48 +1,44 @@
-import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { ConfigService } from './../_services/config.service';
+import { Component, inject } from '@angular/core';
+import { catchError, throwError } from 'rxjs';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
 
-  userEmail = '';
-  subject = '';
-  message = '';
+  emailData = {
+    userEmail: '',
+    subject: '',
+    message: ''
+  };
 
-  async sendEmail() {
-    //TO DO arreglar funcio, no va bé
+  private configService = inject(ConfigService);
 
-    // Validar que se hayan proporcionado todos los campos
-    if (this.userEmail === "" || this.subject === "" || this.message === "") {
-      alert("Please complete all fields.");
-      return;
-    }
+  sendEmail() {
+    const body = {
+          email: this.emailData.userEmail,
+          subject: this.emailData.subject,
+          message: this.emailData.message
+        };
 
-    // Crear el objeto de datos del correo electrónico
-    const emailData = {
-      email: this.userEmail,
-      subject: this.subject,
-      message: this.message
-    };
-
-    // Enviar una solicitud POST a tu servidor
-    const response = await fetch('http://localhost:8080/apiAdri/enviar', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(emailData)
+    this.configService.sendEmail(body)
+    .pipe(
+      catchError(error => {
+        console.log('Error sending email', error);
+        alert('Error sending email, try again later.');
+        return throwError(error);
+      })
+    )
+    .subscribe(response => {
+      console.log('Email sent', response);
+      alert('Message sent successfully');
     });
-
-    if (response.ok) {
-      alert("Email sent to Adrià Martí Comas");
-    } else {
-      alert("Error sending email");
-    }
   }
 
 }
