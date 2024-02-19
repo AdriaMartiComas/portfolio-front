@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ScreenSizeService } from '../_services/screen-size.service';
 import { CommonModule } from '@angular/common';
 

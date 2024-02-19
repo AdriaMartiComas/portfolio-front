@@ -1,6 +1,6 @@
 .banner-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   padding-top: 40px;
 }
 
@@ -14,10 +14,37 @@
 }
 
 .title-container {
-  width: 700px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   margin-top: 100px;
   text-align: center;
+}
+
+.small-screen {
+  .banner-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+
+    .image-container img {
+      float: right;
+      height: 250px;
+      width: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid #000;
+      align-self: flex-end;
+    }
+
+    .title-container {
+      /* width: 50vw; */
+      font-family: "JetBrains Mono", monospace;
+      margin-top: 0;
+      text-align: center;
+    }
+  }
 }
 
 h1 {
@@ -30,7 +57,6 @@ h2 {
   opacity: 0;
   animation: fade-in-up 1.5s ease-out 1s forwards;
 }
-
 
 @keyframes fade-in-up {
   from {
