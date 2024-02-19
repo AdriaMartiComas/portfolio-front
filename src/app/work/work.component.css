@@ -3,19 +3,27 @@
 .Work-container {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 20px; /* Ajusta este valor para cambiar el espacio entre el título y las tarjetas */
+  gap: 20px;
 }
 
 .work-title h1{
-  justify-self: start; /* Alinea el título a la izquierda */
+  justify-self: start;
   width: 90px;
   margin: 0 60px 0 0;
 }
 
+/*CAMBIOS AQUI PARA RESPONSIVE*/
+
 .cards-container {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 100px; /* Ajusta este valor para cambiar el espacio entre las tarjetas */
+  justify-content: space-between; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 40px;
 
 }
 

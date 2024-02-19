@@ -2,10 +2,17 @@
   <div class="work-title">
     <h1>Work</h1>
   </div>
-
-  <div class="cards-container">
-    @for (project of projects; track project.id){
+  <div
+    [ngClass]="{
+      'small-screen': screenSizeService.screenSize === 'small',
+      'medium-screen': screenSizeService.screenSize === 'medium',
+      'large-screen': screenSizeService.screenSize === 'large'
+    }"
+  >
+    <div class="cards-container">
+      @for (project of projects; track project.id){
       <app-work-card [project]="project"></app-work-card>
-    }
+      }
+    </div>
   </div>
 </div>
