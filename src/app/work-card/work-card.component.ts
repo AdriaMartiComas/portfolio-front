@@ -25,6 +25,7 @@ export class WorkCardComponent {
       data: { project: project }
     });
 
+
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
