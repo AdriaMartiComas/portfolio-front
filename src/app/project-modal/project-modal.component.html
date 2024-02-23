@@ -4,10 +4,11 @@
     'small-screen': screenSizeService.screenSize === 'small',
     'medium-screen': screenSizeService.screenSize === 'medium',
     'large-screen': screenSizeService.screenSize === 'large'
-  }"
->
-  <mat-dialog-content #dialogContent>
-    <h1>{{ data.project.title }}</h1>
+  }" >
+
+<h1>{{ data.project.title }}</h1>
+  <mat-dialog-content>
+    <!-- <h1>{{ data.project.title }}</h1> -->
     <div class="content">
       <div class="description">
         <p>{{ data.project.description }}</p>

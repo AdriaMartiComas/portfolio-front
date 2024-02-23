@@ -27,9 +27,9 @@ export class AppComponent {
 
   constructor(public screenSizeService: ScreenSizeService) {}
 
-  // ngOnInit() {
-  //   this.screenSizeService.screenSizeChange.subscribe(size => {
-  //     console.log('Scereen size: ', size);
-  //   });
-  // }
+  ngOnInit() {
+    this.screenSizeService.screenSizeChange.subscribe(size => {
+      console.log('Scereen size: ', size);
+    });
+  }
 }

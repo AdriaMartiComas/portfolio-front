@@ -114,12 +114,11 @@ export class ProjectsService {
     return this.projects;
   }
 
-  GetProjectById(id: number) {
+  GetProjectById(id: number) : Project {
     let project = this.projects.find((project) => project.id === id);
     if (project === undefined) {
-      return new TypeError('Project not found');
-    } else {
-      return project;
+      throw new TypeError('Project not found');
     }
+      return project;
   }
 }

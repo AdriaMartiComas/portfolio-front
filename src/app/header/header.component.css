@@ -41,21 +41,21 @@ body.modal-open header {
 
 h1 {
   font-family: 'JetBrains Mono', monospace;
-  font-size: large;
+  font-size: 16px;
   font-weight: 700;
   color: #000;
 }
 
 h2 {
   font-family: 'JetBrains Mono', monospace;
-  font-size: large;
+  font-size: 16px;
   font-weight: 700;
   color: #000;
 }
 
 h3 {
   font-family: 'JetBrains Mono', monospace;
-  font-size: large;
+  font-size: 16px;
   font-weight: 300;
   color: #000;
 }
@@ -68,13 +68,13 @@ h3 {
 }
 
 .name h1 {
-  font-size: large;
+  font-size: 16px;
   font-weight: 700;
   margin-right: 10px;
 }
 
 .name h2 {
-  font-size: large;
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -89,7 +89,7 @@ h3 {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 50px;
-  font-size: large;
+  font-size: 16px;
   background: none;
   border: none;
   font-family: 'JetBrains Mono', monospace;
@@ -177,5 +177,6 @@ a {
 
 .hamburger-menu[aria-expanded="true"] ~ .dropdown-menu {
   display: flex;
+  color: black;
 }
 

@@ -14,8 +14,18 @@ body {
   margin: 0 auto;
   min-width:650px;
   max-width: 1200px;
-  /* padding-top: 30px; */
   padding-left: 30px;
   padding-right: 30px;
+
 }
 
+.cdk-global-scrollblock {
+  position: static;
+  width: 100%;
+  /* overflow-y: scroll; */
+}
+
+
+.no-scroll {
+  overflow: hidden;
+}

@@ -20,15 +20,18 @@ export class WorkCardComponent {
   constructor(public dialog: MatDialog, private projectsService: ProjectsService) {}
 
   openDialog(id: number) {
+    document.body.classList.add('no-scroll');
+
     const project = this.projectsService.GetProjectById(id);
     const dialogRef = this.dialog.open(ProjectModalComponent, {
-      data: { project: project }
+      data: { project: project },
+      autoFocus: false,
     });
-
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      document.body.classList.remove('no-scroll');
     });
+
   }
 
 }
