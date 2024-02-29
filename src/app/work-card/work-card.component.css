@@ -1,6 +1,6 @@
 .card {
-  width: 450px;
-  height: 320px;
+  width: 315px;
+  height: 390px;
   border: 1px solid #000;
   border-radius: 15px;
   display: flex;
@@ -10,27 +10,51 @@
 }
 
 .text-content {
-  padding: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
-  height: 250px;
+  /* padding-left: 30px;
+  padding-right: 30px; */
+  width: 270px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-p {
-  font-weight: lighter;
-  letter-spacing: 1px;
-  text-align: justify;
-  font-size: 1.2em;
+.text-content h2 {
+  height: 85px;
+  overflow: auto;
+  margin: 0;
+  padding-top: 20px;
+  text-align: center;
+  line-height: 2rem;
 }
 
-.tags {
+.text-content p {
+  height: 140px;
+  overflow: auto;
+  margin: 0;
+}
+
+.text-content .btn {
+  height: 36px;
+  overflow: auto;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.text-content .tags {
+  height: 98px;
+  overflow: auto;
+  margin: 0;
+
+}
+
+
+
+
+/* .tags {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  border-top: 1px solid #000;
+
   display: flex;
   gap: 20px;
   height: 50px;
@@ -39,29 +63,54 @@ p {
   width: 100%;
   background: #ffffff7b;
 
+} */
+
+.tags-container {
+  border-top: 1px solid #000;
+  background: #f8f4e9;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 315px;
+  display: flex;
+  justify-content: center;
+}
+
+.tags {
+  align-self: center;
+  width: 290px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  gap: 10px;
 }
 
 .tag {
-  padding: 5px 10px;
+  padding: 5px 15px;
   border-radius: 150px;
   width: fit-content;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.347);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.347);
 }
 
 .btn {
   display: flex;
   justify-content: center;
   align-items: center;
+
+
+
 }
 
 .btn button {
-  font-weight: 700;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: -0.025em;
   border-radius: 50px;
   padding: 5px 10px;
-  font-size: 16px;
   background: none;
   border: none;
-  font-family: 'JetBrains Mono', monospace;
+
   transition: background-color 0.5s ease;
 }
 

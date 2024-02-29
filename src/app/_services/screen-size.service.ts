@@ -14,13 +14,13 @@ export class ScreenSizeService {
     this.screenSize = 'large';
 
     this.breakpointObserver.observe([
-      '(max-width: 900px)',
-      '(min-width: 900px) and (max-width: 1200px)',
+      '(max-width: 930px)',
+      '(min-width: 930px) and (max-width: 1200px)',
       '(min-width: 1200px)'
     ]).subscribe(result => {
-      if (result.breakpoints['(max-width: 900px)']) {
+      if (result.breakpoints['(max-width: 930px)']) {
         this.updateScreenSize('small');
-      } else if (result.breakpoints['(min-width: 900px) and (max-width: 1200px)']) {
+      } else if (result.breakpoints['(min-width: 930px) and (max-width: 1200px)']) {
         this.updateScreenSize('medium');
       } else {
         this.updateScreenSize('large');

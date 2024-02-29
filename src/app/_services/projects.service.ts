@@ -16,7 +16,7 @@ export class ProjectsService {
         '../../assets/ita/ita-challenges-3.png',
       ],
       projectLink: 'https://github.com/IT-Academy-BCN/ita-challenges-backend',
-      subtitle: 'Web project for carrying out programming challenges.',
+      subtitle: 'Digital platform designed for solving coding challenges and programming tasks.',
       description:
         'Collaborator in the project based on microservices in different Docker containers. A project with a large work team, using the SCRUM methodology for correct development.',
       tags: [Tag.JAVA, Tag.SPRING, Tag.DOCKER, Tag.GIT, Tag.JUNIT],

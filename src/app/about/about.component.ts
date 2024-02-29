@@ -20,10 +20,9 @@ import { Component } from '@angular/core';
   `,
   styles: `
     .about-container {
-      font-family: 'JetBrains Mono', monospace;
       display: grid;
       grid-template-columns: auto 1fr;
-      gap: 20px;
+      gap: 30px;
     }
     .about-title {
       width: 90px;

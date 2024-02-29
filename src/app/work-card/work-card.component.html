@@ -1,17 +1,19 @@
 <div class="card">
   <div class="text-content">
-    <h1>{{ project.title }}</h1>
+    <h2>{{ project.title }}</h2>
     <p>{{ project.subtitle }}</p>
     <div class="btn">
       <button mat-button (click)="openDialog(project.id)">View more</button>
       <a [href]="project.projectLink" target="_blank">
-        <button>View code</button>
+        <button mat-button>View code</button>
       </a>
     </div>
-  </div>
-  <div class="tags">
-    @for (tag of project.tags; track tag) {
-    <span class="tag" [style.backgroundColor]="tag.color">{{ tag }}</span>
-    }
+    <div class="tags-container">
+      <div class="tags">
+        @for (tag of project.tags; track tag) {
+        <span class="tag" [style.backgroundColor]="tag.color">{{ tag }}</span>
+        }
+      </div>
+    </div>
   </div>
 </div>

@@ -1,10 +1,17 @@
-@font-face {
+/* @font-face {
   font-family: 'JetBrains Mono';
   src: url('/tipos/JetBrainsMono-2.304/fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
-}
+} */
+
+/* @font-face {
+  font-family: 'Roboto Mono';
+  src: url('/tipos/RobotoMono-2.000/fonts/ttf/RobotoMono-Regular.ttf') format('truetype');
+} */
+
 
 html {
-  font-family: 'JetBrains Mono', monospace;
+  /* font-family: 'JetBrains Mono', monospace; */
+  font-family: 'Roboto Mono', ui-sans-serif;
   background-color: rgba(206, 175, 96, 0.261);
   scroll-behavior: smooth;
 
@@ -29,3 +36,23 @@ body {
 .no-scroll {
   overflow: hidden;
 }
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: -.05em;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -.05em;
+}
+
+p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: -.025em;
+}
+
+

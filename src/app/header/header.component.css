@@ -15,7 +15,7 @@ header {
   margin-right: -20px;
   padding-right: 20px;
   z-index: 100;
-  background: linear-gradient( to bottom, rgb(242 233 213) 0%, rgb(242 233 213) 85px, rgba(255, 255, 255, 0) 70%);
+  background: linear-gradient( to bottom, rgb(242 233 213) 0%, rgb(242 233 213) 100px, rgba(255, 255, 255, 0) 70%);
   transition: opacity 0.5s ease;
   opacity: 1;
 }
@@ -29,7 +29,6 @@ body.modal-open header {
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  font-family: 'JetBrains Mono', monospace;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,28 +38,8 @@ body.modal-open header {
   margin-bottom: 80px;
 }
 
-h1 {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 16px;
-  font-weight: 700;
-  color: #000;
-}
-
-h2 {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 16px;
-  font-weight: 700;
-  color: #000;
-}
-
-h3 {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 16px;
-  font-weight: 300;
-  color: #000;
-}
-
 .name {
+  color: #000;
   display: flex;
   align-items: center;
   letter-spacing: 1.5px;
@@ -68,13 +47,15 @@ h3 {
 }
 
 .name h1 {
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -.05em;
+  font-weight: 400;
   margin-right: 10px;
 }
 
 .name h2 {
-  font-size: 16px;
+  font-size: 1.5rem;
+  letter-spacing: -.05em;
   font-weight: 300;
 }
 
@@ -83,16 +64,17 @@ h3 {
 }
 
 .nav-buttons button {
+  font-family: inherit;
   margin-left: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 50px;
-  font-size: 16px;
+  font-size: 1.2rem;
+  font-weight: 400;
   background: none;
   border: none;
-  font-family: 'JetBrains Mono', monospace;
   transition: background-color 0.5s ease;
 }
 
@@ -103,14 +85,17 @@ h3 {
   padding-right: 10px;
   border-radius: 50px;
   background-color:  rgba(255, 255, 0, 0.617);
+  cursor: pointer;
 }
 
 a {
   text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .name {
-  cursor: default;
+  cursor: pointer;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 50px;
@@ -132,6 +117,7 @@ a {
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  color: #000;
 
   div {
     width: 2rem;
