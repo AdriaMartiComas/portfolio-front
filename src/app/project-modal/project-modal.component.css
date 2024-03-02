@@ -64,7 +64,8 @@ mat-dialog-content {
 
 p {
   margin-right: 40px;
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", serif; */
+  font-family: 'Roboto Mono', ui-sans-serif;
   font-weight: 300;
   letter-spacing: 0.03em;
   line-height: 1.5em;
