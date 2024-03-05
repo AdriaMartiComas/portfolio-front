@@ -13,8 +13,6 @@
 }
 
 #emailForm {
-  width: 1037x;
-  height: 480px;
   padding: 30px 35px 15px;
   border: solid 1px #000;
   border-radius: 15px;
@@ -46,12 +44,11 @@ input, textarea {
 }
 
 .button-container {
-  margin-top: auto;
+  margin-top: -15px;
   align-self: center;
 }
 
 .my-button {
-  /* margin-left: 10px; */
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
