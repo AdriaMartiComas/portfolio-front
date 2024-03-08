@@ -7,18 +7,21 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class ScreenSizeService {
-  screenSize: 'small' | 'medium' | 'large';
-  screenSizeChange: Subject<'small' | 'medium' | 'large'> = new Subject();
+  screenSize: 'xsmall' | 'small' | 'medium' | 'large';
+  screenSizeChange: Subject<'xsmall' | 'small' | 'medium' | 'large'> = new Subject();
 
   constructor(private breakpointObserver: BreakpointObserver) {
     this.screenSize = 'large';
 
     this.breakpointObserver.observe([
-      '(max-width: 930px)',
+      '(max-width: 700px)',
+      '(min-width: 700px) and (max-width: 930px)',
       '(min-width: 930px) and (max-width: 1200px)',
       '(min-width: 1200px)'
     ]).subscribe(result => {
-      if (result.breakpoints['(max-width: 930px)']) {
+      if (result.breakpoints['(max-width: 700px)']) {
+        this.updateScreenSize('xsmall');
+      } else if (result.breakpoints['(min-width: 700px) and (max-width: 930px)']) {
         this.updateScreenSize('small');
       } else if (result.breakpoints['(min-width: 930px) and (max-width: 1200px)']) {
         this.updateScreenSize('medium');
@@ -28,7 +31,7 @@ export class ScreenSizeService {
     });
   }
 
-  private updateScreenSize(size: 'small' | 'medium' | 'large') {
+  private updateScreenSize(size: 'xsmall' |'small' | 'medium' | 'large') {
     if (this.screenSize !== size) {
       this.screenSize = size;
       this.screenSizeChange.next(size);

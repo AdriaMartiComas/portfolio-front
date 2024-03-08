@@ -1,13 +1,3 @@
-/* @font-face {
-  font-family: 'JetBrains Mono';
-  src: url('/tipos/JetBrainsMono-2.304/fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
-} */
-
-/* @font-face {
-  font-family: 'Roboto Mono';
-  src: url('/tipos/RobotoMono-2.000/fonts/ttf/RobotoMono-Regular.ttf') format('truetype');
-} */
-
 
 html {
   /* font-family: 'JetBrains Mono', monospace; */
@@ -23,7 +13,6 @@ body {
   max-width: 1200px;
   padding-left: 30px;
   padding-right: 30px;
-
 }
 
 .cdk-global-scrollblock {
@@ -31,10 +20,10 @@ body {
   width: 100%;
   /* overflow-y: scroll; */
 }
-
+/*
 .no-scroll {
   overflow: hidden;
-}
+} */
 
 h1 {
   font-size: 3.5rem;
@@ -53,5 +42,4 @@ p {
   font-weight: 300;
   letter-spacing: -.025em;
 }
-
 

@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   padding-top: 40px;
+  gap: 20px;
 }
 
 .image-container img {
@@ -14,10 +15,11 @@
 }
 
 .title-container {
-  margin-top: 100px;
+  margin-top: 20px;
   text-align: center;
 }
 
+.xsmall-screen,
 .small-screen {
   .banner-container {
     display: grid;

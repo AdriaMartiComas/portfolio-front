@@ -1,5 +1,6 @@
 <div
   [ngClass]="{
+    'xsmall-screen': screenSizeService.screenSize === 'xsmall',
     'small-screen': screenSizeService.screenSize === 'small',
     'medium-screen': screenSizeService.screenSize === 'medium',
     'large-screen': screenSizeService.screenSize === 'large'

@@ -26,6 +26,8 @@ import { Component } from '@angular/core';
       }
 
 button {
+  color: black;
+  text-decoration: none;
   font-family: inherit;
   font-weight: 400;
   font-size: 1.2rem;

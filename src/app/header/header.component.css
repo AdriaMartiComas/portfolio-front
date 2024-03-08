@@ -1,12 +1,11 @@
+.xsmall-screen .app-header,
 .small-screen .app-header,
 .medium-screen .app-header,
 .large-screen .app-header {
   width: 100%;
 }
 
- .small-screen {
-  min-width: 650px;
-}
+
 
 header {
   top: 0;
@@ -25,6 +24,7 @@ body.modal-open header {
 }
 
 .header-container {
+
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;

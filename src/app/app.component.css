@@ -11,9 +11,12 @@
 .header-wrapper {
     box-sizing: border-box;
     position: fixed;
+    top: 0;
     padding-left: 30px;
     padding-right: 30px;
     width: 100%;
+    /*Aixo manten l'ample a 700px encara que la pantalla sigui mes petita*/
+    min-width: 700px;
     max-width: 1260px;
     left: 50%;
     transform: translateX(-50%);
@@ -22,4 +25,15 @@
 
 .no-scroll {
   overflow: hidden;
+}
+
+
+
+
+.xsmall-screen{
+  position: relative;
+  transform: scale(0.9);
+  transform-origin: top;
+  overflow-x: hidden;
+  max-height: max-content;
 }
